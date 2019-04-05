@@ -2,4 +2,7 @@
 /.idea
 
 #starter files
-/*/starter/
+starter/
+
+#node
+node_modules
