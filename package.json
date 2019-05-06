@@ -3,6 +3,8 @@
     "autoprefixer": "^9.5.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-stylelint": "^8.0.0",
@@ -11,5 +13,8 @@
     "postcss-sorting": "^4.1.0",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0"
+  },
+  "scripts": {
+    "gulp": "gulp"
   }
 }

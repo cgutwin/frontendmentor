@@ -6,18 +6,22 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700"
           rel="stylesheet">
     <!--TODO: Optimize CSS Styles in head and preload-->
+    <!-- build:css -->
     <link href="style.css"
           rel="stylesheet"/>
+    <!-- endbuild -->
+    <!-- build:js -->
     <link rel="icon"
           type="image/png"
-          href="./images/favicon-32x32.png">
+          href="./assets/favicon-32x32.png">
+    <!-- endbuild -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
     <header>
       <img alt="fylo-logo"
-           src="./images/logo.svg"
+           src="./assets/logo.svg"
            class="fylo-logo"/>
       <nav>
         <ul>
@@ -28,21 +32,24 @@
       </nav>
     </header>
     <main>
-      <section id="above-fold">
+      <section id="above-fold" class="flex flex-dir-col flex-align-cen text-center">
         <img alt="illustration-intro"
-             src="./images/illustration-intro.png"/>
-        <h1>All your files in one secure location, accessible anywhere.</h1>
+             class="intro-image"
+             src="./assets/illustration-intro.png"/>
+        <h1>
+          All your files in one secure location, accessible anywhere.
+        </h1>
         <p>
           Fylo stores all your most important files in one secure location.
           Access them wherever you need, share and collaborate with
           friends family, and co-workers.
         </p>
-        <button>Get Started</button>
+        <button class="cta-button text-center">Get Started</button>
       </section>
       <section>
         <div>
           <img alt="icon-access-anywhere"
-               src="./images/icon-access-anywhere.svg"/>
+               src="./assets/icon-access-anywhere.svg"/>
           <div>
             <h4>Access your files, anywhere</h4>
             <p>
@@ -54,7 +61,7 @@
         </div>
         <div>
           <img alt="icon-security"
-               src="./images/icon-security.svg"/>
+               src="./assets/icon-security.svg"/>
           <div>
             <h4>Security you can trust</h4>
             <p>
@@ -66,7 +73,7 @@
         </div>
         <div>
           <img alt="icon-collaboration"
-               src="./images/icon-collaboration.svg"/>
+               src="./assets/icon-collaboration.svg"/>
           <div>
             <h4>Real-time collaboration</h4>
             <p>
@@ -78,7 +85,7 @@
         </div>
         <div>
           <img alt="icon-any-file"
-               src="./images/icon-any-file.svg"/>
+               src="./assets/icon-any-file.svg"/>
           <div>
             <h4>Store any time of file</h4>
             <p>
@@ -90,8 +97,8 @@
         </div>
       </section>
       <section>
-        <img alt="illustration-stay-productive"
-             src="./images/illustration-stay-productive.png"/>
+<!--        <img alt="illustration-stay-productive"-->
+<!--             src="./assets/illustration-stay-productive.png"/>-->
         <div>
           <h3>Stay productive, wherever you are.</h3>
           <p>
@@ -114,7 +121,7 @@
           </div>
           <div>
             <img alt="profile-1"
-                 src="./images/profile-1.jpg"/>
+                 src="./assets/profile-1.jpg"/>
             <div>
               <h5>Satish Patel</h5>
               <p>Founder & CEO, Huddle</p>
@@ -130,7 +137,7 @@
           </div>
           <div>
             <img alt="profile-2"
-                 src="./images/profile-2.jpg"/>
+                 src="./assets/profile-2.jpg"/>
             <div>
               <h5>Bruce McKenzie</h5>
               <p>Founder & CEO, Huddle</p>
@@ -146,7 +153,7 @@
           </div>
           <div>
             <img alt="profile-3"
-                 src="./images/profile-3.jpg"/>
+                 src="./assets/profile-3.jpg"/>
             <div>
               <h5>Iva Boyd</h5>
               <p>Founder & CEO, Huddle</p>
@@ -157,7 +164,7 @@
       <section>
         <div>
           <div>
-            <h2>Get early access today</h2>
+            <h3>Get early access today</h3>
             <p>
               It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
               questions, our support team would be happy to help you.
@@ -174,11 +181,11 @@
     </main>
     <footer>
       <img alt="fylo-logo"
-           src="./images/logo.svg"/>
+           src="./assets/logo.svg"/>
       <div>
         <div>
           <img alt="icon-location"
-               src="./images/icons/location.svg"/>
+               src="./assets/icons/location.svg"/>
           <p>
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor
@@ -189,12 +196,12 @@
       <div>
         <div>
           <img alt="icon-phone"
-               src="./images/icons/phone.svg"/>
+               src="./assets/icons/phone.svg"/>
           <p>+1-543-123-4567</p>
         </div>
         <div>
           <img alt="icon-email"
-               src="./images/icons/email.svg"/>
+               src="./assets/icons/email.svg"/>
           <p>info@fylo.com</p>
         </div>
         <nav>
@@ -213,19 +220,19 @@
              rel="nofollow noopener noreferrer"
              target="_blank">
             <img alt="fylo-facebook"
-                 src="./images/icons/facebook.svg"/>
+                 src="./assets/icons/facebook.svg"/>
           </a>
           <a href="https://twitter.com/"
              rel="nofollow noopener noreferrer"
              target="_blank">
             <img alt="fylo-twitter"
-                 src="./images/icons/twitter.svg"/>
+                 src="./assets/icons/twitter.svg"/>
           </a>
           <a href="https://instagram.com/"
              rel="nofollow noopener noreferrer"
              target="_blank">
             <img alt="fylo-instagram"
-                 src="./images/icons/instagram.svg"/>
+                 src="./assets/icons/instagram.svg"/>
           </a>
         </div>
       </div>

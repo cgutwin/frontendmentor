@@ -2,8 +2,35 @@ const { src, dest, parallel } = require('gulp')
 const postcss = require('gulp-postcss')
 const gulpStylelint = require('gulp-stylelint')
 const rename = require('gulp-rename')
+const htmlReplace = require('gulp-html-replace')
+const htmlmin = require('gulp-htmlmin')
 
-function buildCSS () {
+function assets () {
+  return src('src/*/assets/*')
+    .pipe(dest('./dist'))
+}
+
+function indexHtml () {
+  return src('src/*/index.html')
+    .pipe(htmlReplace({
+      'css': 'style.min.css',
+      'js': {
+        'src': 'favicon.png',
+        'tpl': '<link rel="icon" type="image/png" href="%s">'
+      }
+    }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      maxLineLength: 120,
+      removeComments: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      useShortDoctype: true
+    }))
+    .pipe(dest('./dist'))
+}
+
+function css () {
   return src('src/**/*.css')
     .pipe(gulpStylelint({
       reporters: [
@@ -16,4 +43,7 @@ function buildCSS () {
     .pipe(dest('./dist'))
 }
 
-exports.default = parallel(buildCSS)
+exports.css = css
+exports.indexHtml = indexHtml
+exports.assets = assets
+exports.default = parallel(assets, css, indexHtml)
