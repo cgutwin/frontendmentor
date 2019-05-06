@@ -8,21 +8,21 @@
     <!--TODO: Optimize CSS Styles in head and preload-->
     <!-- build:css -->
     <link href="style.css"
-          rel="stylesheet"/>
+          rel="stylesheet" />
     <!-- endbuild -->
     <!-- build:js -->
-    <link rel="icon"
-          type="image/png"
-          href="./assets/favicon-32x32.png">
+    <link href="./assets/favicon-32x32.png"
+          rel="icon"
+          type="image/png">
     <!-- endbuild -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
   </head>
 
   <body>
     <header>
       <img alt="fylo-logo"
-           src="./assets/logo.svg"
-           class="fylo-logo"/>
+           class="fylo-logo"
+           src="./assets/logo.svg" />
       <nav>
         <ul>
           <li>Features</li>
@@ -31,25 +31,26 @@
         </ul>
       </nav>
     </header>
+    <section class="flex flex-dir-col flex-align-cen text-center" id="above-fold">
+      <img alt="illustration-intro"
+           class="intro-image"
+           src="./assets/illustration-intro.png" />
+      <h1>
+        All your files in one secure location, accessible anywhere.
+      </h1>
+      <p>
+        Fylo stores all your most important files in one secure location.
+        Access them wherever you need, share and collaborate with
+        friends family, and co-workers.
+      </p>
+      <button class="cta-button text-center">Get Started</button>
+    </section>
     <main>
-      <section id="above-fold" class="flex flex-dir-col flex-align-cen text-center">
-        <img alt="illustration-intro"
-             class="intro-image"
-             src="./assets/illustration-intro.png"/>
-        <h1>
-          All your files in one secure location, accessible anywhere.
-        </h1>
-        <p>
-          Fylo stores all your most important files in one secure location.
-          Access them wherever you need, share and collaborate with
-          friends family, and co-workers.
-        </p>
-        <button class="cta-button text-center">Get Started</button>
-      </section>
-      <section>
-        <div>
+      <section id="features">
+        <div class="features-entry text-center">
           <img alt="icon-access-anywhere"
-               src="./assets/icon-access-anywhere.svg"/>
+               src="./assets/icon-access-anywhere.svg"
+               class="feature-icon" />
           <div>
             <h4>Access your files, anywhere</h4>
             <p>
@@ -59,9 +60,10 @@
             </p>
           </div>
         </div>
-        <div>
+        <div class="features-entry text-center">
           <img alt="icon-security"
-               src="./assets/icon-security.svg"/>
+               src="./assets/icon-security.svg"
+               class="feature-icon" />
           <div>
             <h4>Security you can trust</h4>
             <p>
@@ -71,9 +73,10 @@
             </p>
           </div>
         </div>
-        <div>
+        <div class="features-entry text-center">
           <img alt="icon-collaboration"
-               src="./assets/icon-collaboration.svg"/>
+               src="./assets/icon-collaboration.svg"
+               class="feature-icon" />
           <div>
             <h4>Real-time collaboration</h4>
             <p>
@@ -83,9 +86,10 @@
             </p>
           </div>
         </div>
-        <div>
+        <div class="features-entry text-center">
           <img alt="icon-any-file"
-               src="./assets/icon-any-file.svg"/>
+               src="./assets/icon-any-file.svg"
+               class="feature-icon" />
           <div>
             <h4>Store any time of file</h4>
             <p>
@@ -97,8 +101,8 @@
         </div>
       </section>
       <section>
-<!--        <img alt="illustration-stay-productive"-->
-<!--             src="./assets/illustration-stay-productive.png"/>-->
+        <!--        <img alt="illustration-stay-productive"-->
+        <!--             src="./assets/illustration-stay-productive.png"/>-->
         <div>
           <h3>Stay productive, wherever you are.</h3>
           <p>
@@ -121,7 +125,7 @@
           </div>
           <div>
             <img alt="profile-1"
-                 src="./assets/profile-1.jpg"/>
+                 src="./assets/profile-1.jpg" />
             <div>
               <h5>Satish Patel</h5>
               <p>Founder & CEO, Huddle</p>
@@ -137,7 +141,7 @@
           </div>
           <div>
             <img alt="profile-2"
-                 src="./assets/profile-2.jpg"/>
+                 src="./assets/profile-2.jpg" />
             <div>
               <h5>Bruce McKenzie</h5>
               <p>Founder & CEO, Huddle</p>
@@ -153,7 +157,7 @@
           </div>
           <div>
             <img alt="profile-3"
-                 src="./assets/profile-3.jpg"/>
+                 src="./assets/profile-3.jpg" />
             <div>
               <h5>Iva Boyd</h5>
               <p>Founder & CEO, Huddle</p>
@@ -171,9 +175,9 @@
             </p>
           </div>
           <div>
-            <input name='ea-email'
+            <input name="ea-email"
                    placeholder="email@example.com"
-                   type="email"/>
+                   type="email" />
             <button>Get Started For Free</button>
           </div>
         </div>
@@ -181,11 +185,11 @@
     </main>
     <footer>
       <img alt="fylo-logo"
-           src="./assets/logo.svg"/>
+           src="./assets/logo.svg" />
       <div>
         <div>
           <img alt="icon-location"
-               src="./assets/icons/location.svg"/>
+               src="./assets/icons/location.svg" />
           <p>
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor
@@ -196,12 +200,12 @@
       <div>
         <div>
           <img alt="icon-phone"
-               src="./assets/icons/phone.svg"/>
+               src="./assets/icons/phone.svg" />
           <p>+1-543-123-4567</p>
         </div>
         <div>
           <img alt="icon-email"
-               src="./assets/icons/email.svg"/>
+               src="./assets/icons/email.svg" />
           <p>info@fylo.com</p>
         </div>
         <nav>
@@ -220,19 +224,19 @@
              rel="nofollow noopener noreferrer"
              target="_blank">
             <img alt="fylo-facebook"
-                 src="./assets/icons/facebook.svg"/>
+                 src="./assets/icons/facebook.svg" />
           </a>
           <a href="https://twitter.com/"
              rel="nofollow noopener noreferrer"
              target="_blank">
             <img alt="fylo-twitter"
-                 src="./assets/icons/twitter.svg"/>
+                 src="./assets/icons/twitter.svg" />
           </a>
           <a href="https://instagram.com/"
              rel="nofollow noopener noreferrer"
              target="_blank">
             <img alt="fylo-instagram"
-                 src="./assets/icons/instagram.svg"/>
+                 src="./assets/icons/instagram.svg" />
           </a>
         </div>
       </div>

@@ -1,4 +1,5 @@
 :root {
+  --bg-curvy-src: url("./assets/bg-curvy-mobile.svg");
   --cta-gradient: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   --16px-to-rem: 1.143rem;
 }
@@ -6,6 +7,10 @@
 /* Larger than Mobile*/
 @media only screen
 and (min-width: 376px) {
+  :root {
+    --bg-curvy-src: url("./assets/bg-curvy-desktop.svg");
+  }
+
   /* Header Media */
   header ul {
     margin-left: auto;
@@ -14,7 +19,40 @@ and (min-width: 376px) {
 
   /* Font Sizing */
   #above-fold > p { font-size: var(--16px-to-rem); }
+
   .cta-button { font-size: var(--16px-to-rem); }
+
+  /* Grid */
+  #features {
+    align-items: flex-start;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Grid in Mobile */
+@media only screen
+and (max-width: 867px) {
+  #features {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Add in some spacing for items listed in the flex. */
+  .features-entry:not(:first-child) {
+    margin-top: 20vw;
+  }
+}
+
+/* Grid in Mobile */
+@media only screen
+and (min-width: 867px) {
+  .features-entry:nth-child(4n + 1), .features-entry:nth-child(4n + 2) {
+    margin-bottom: 10vh;
+  }
 }
 
 /* Global */
@@ -32,7 +70,11 @@ body {
 }
 
 li { list-style: none; }
-main { padding: 0 10%; }
+
+main {
+  background: hsl(218, 28%, 13%);
+  padding: 25vh 10% 0;
+}
 
 /* Font Sizing */
 
@@ -49,8 +91,8 @@ h6 {
 }
 
 h1 {
-  font-size: calc(1.2rem + 1vw);
-  max-width: 550px;
+  font-size: calc(1.4rem + 1vw);
+  max-width: 600px;
 }
 
 #above-fold > p {
@@ -59,8 +101,11 @@ h1 {
 
 /* Helpers */
 .text-center { text-align: center; }
+
 .flex { display: flex; }
+
 .flex-dir-col { flex-direction: column; }
+
 .flex-align-cen { align-items: center; }
 
 /* Header */
@@ -70,12 +115,14 @@ header {
   grid: 1fr / 22vw 1fr;
   padding: 5%;
 }
+
 header ul {
   display: flex;
   flex-direction: row;
   /*font-size: 1rem;*/
   justify-content: space-between;
 }
+
 .fylo-logo {
   max-height: 52px;
   max-width: 176px;
@@ -95,20 +142,35 @@ button {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   margin-top: 20px;
+  max-width: 200px;
   padding: 15px 0;
   width: 100%;
-  max-width: 200px;
 }
 
 /* Images */
 .intro-image {
-  width: 50%;
+  height: 50%;
   max-width: 675px;
   min-width: 250px;
+  object-fit: scale-down;
+  /* Chrome messes with the aspect ratio without this line. */
+  width: 50%;
 }
 
 /* Anchors */
 #above-fold {
+  background-size: contain;
   margin-top: 20px;
-  padding-bottom: 20vh;
+  padding: 0 10%;
+}
+
+/* Features Entry */
+.features-entry {
+  justify-self: center;
+  max-width: 380px;
+}
+
+.feature-icon {
+  height: 60px;
+  width: auto;
 }
