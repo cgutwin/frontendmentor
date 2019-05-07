@@ -22,6 +22,23 @@ and (min-width: 376px) {
     max-width: 300px;
   }
 
+  .testimonial-card {
+    background: hsl(219, 30%, 18%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px hsla(0, 100%, 100%, 0.05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .testimonial-card > p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
   /* Font Sizing */
   #above-fold > p { font-size: var(--16px-to-rem); }
 
@@ -52,6 +69,10 @@ and (min-width: 376px) {
 
   #stay-productive > img {
     margin: 5%;
+  }
+
+  #testimonials {
+    flex-direction: row;
   }
 }
 
@@ -84,6 +105,17 @@ and (max-width: 867px) {
   #stay-productive > div > h3, #stay-productive > div > p {
     margin-bottom: 5%;
   }
+
+  #testimonials {
+    background: top 25px left 20px / 30px url("./assets/bg-quotes.png") no-repeat;
+    flex-direction: column;
+    padding: 50px 1vw 0;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+    margin-bottom: 8%;
+  }
 }
 
 /* Grid in Mobile */
@@ -100,6 +132,19 @@ and (min-width: 867px) {
   /* Anchors */
   #stay-productive > * {
     max-width: 45%;
+  }
+
+  .testimonial-card {
+    max-width: 25%;
+  }
+
+  .testimonial-card:not(:first-of-type) {
+    margin-left: 2%;
+  }
+
+  #testimonials {
+    background: top left / auto url("./assets/bg-quotes.png") no-repeat;
+    padding: 35px 1vw 0;
   }
 }
 
@@ -141,6 +186,10 @@ h6 {
 h1 {
   font-size: calc(1.4rem + 1vw);
   max-width: 600px;
+}
+
+h5 {
+  font-size: 1.2rem;
 }
 
 #above-fold > p {
@@ -218,6 +267,11 @@ button {
   white-space: pre-line;
 }
 
+#testimonials {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Features Entry */
 .features-entry {
   justify-self: center;
@@ -239,4 +293,21 @@ button {
 .cta-link::after {
   display: inline-block;
   content: "\279e";
+}
+
+/* Testimonials */
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+}
+
+.testimonial-profile > div > * {
+  margin: 0 10px;
+}
+
+.profile-icon {
+  border-radius: 30px;
+  width: 40px;
+  height: auto;
 }
