@@ -11,6 +11,11 @@ and (min-width: 376px) {
     --bg-curvy-src: url("./assets/bg-curvy-desktop.svg");
   }
 
+  h3 {
+    font-size: calc(1.4rem + 1vw);
+    line-height: 1.3;
+  }
+
   /* Header Media */
   header ul {
     margin-left: auto;
@@ -30,6 +35,24 @@ and (min-width: 376px) {
     grid-gap: 50px;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Anchors */
+  #stay-productive {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10% 0;
+  }
+
+  #stay-productive > div > h3, #stay-productive > div > p {
+    margin-bottom: 3%;
+  }
+
+  #stay-productive > img {
+    margin: 5%;
+  }
 }
 
 /* Grid in Mobile */
@@ -41,9 +64,25 @@ and (max-width: 867px) {
     flex-direction: column;
   }
 
+  h3 {
+    font-size: calc(1rem + 1vw);
+    max-width: border-box;
+  }
+
   /* Add in some spacing for items listed in the flex. */
   .features-entry:not(:first-child) {
     margin-top: 20vw;
+  }
+
+  #stay-productive {
+    margin: 20vw 0;
+  }
+
+  #stay-productive > img {
+    margin: 10%;
+  }
+  #stay-productive > div > h3, #stay-productive > div > p {
+    margin-bottom: 5%;
   }
 }
 
@@ -53,11 +92,20 @@ and (min-width: 867px) {
   .features-entry:nth-child(4n + 1), .features-entry:nth-child(4n + 2) {
     margin-bottom: 10vh;
   }
+
+  h3 {
+    max-width: 70%;
+  }
+
+  /* Anchors */
+  #stay-productive > * {
+    max-width: 45%;
+  }
 }
 
 /* Global */
 html {
-  background: hsl(217, 28%, 15%);
+  background: linear-gradient(to bottom, hsl(217, 28%, 15%), hsl(217, 28%, 15%) 100vh, hsl(218, 28%, 13%) 100vh, hsl(218, 28%, 13%));
   color: hsl(0, 0%, 100%);
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -129,6 +177,8 @@ header ul {
   width: 100%;
 }
 
+/* FIXME: Chrome renders too much space around above-fold image. */
+
 /* Buttons */
 button {
   cursor: pointer;
@@ -148,7 +198,7 @@ button {
 }
 
 /* Images */
-.intro-image {
+.half-width-img {
   height: 50%;
   max-width: 675px;
   min-width: 250px;
@@ -164,6 +214,10 @@ button {
   padding: 0 10%;
 }
 
+#stay-productive > div > h3 {
+  white-space: pre-line;
+}
+
 /* Features Entry */
 .features-entry {
   justify-self: center;
@@ -173,4 +227,16 @@ button {
 .feature-icon {
   height: 60px;
   width: auto;
+}
+
+/* Links */
+.cta-link {
+  color: hsl(176, 68%, 64%);
+  text-decoration: none;
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  padding-bottom: 3px;
+}
+.cta-link::after {
+  display: inline-block;
+  content: "\279e";
 }
