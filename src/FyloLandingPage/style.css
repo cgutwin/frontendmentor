@@ -11,7 +11,7 @@ and (min-width: 376px) {
     --bg-curvy-src: url("./assets/bg-curvy-desktop.svg");
   }
 
-  h3 {
+  h2 {
     font-size: calc(1.4rem + 1vw);
     line-height: 1.3;
   }
@@ -22,25 +22,16 @@ and (min-width: 376px) {
     max-width: 300px;
   }
 
-  .testimonial-card {
-    background: hsl(219, 30%, 18%);
-    border-radius: 5px;
-    box-shadow: 0 0 10px 2px hsla(0, 100%, 100%, 0.05);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    z-index: 2;
-  }
-
   .testimonial-card > p {
     line-height: 1.6;
     margin-bottom: 20px;
   }
 
   /* Font Sizing */
-  #above-fold > p { font-size: var(--16px-to-rem); }
+  #above-fold > p {
+    font-size: var(--16px-to-rem);
+    margin-bottom: 10%;
+  }
 
   .cta-button { font-size: var(--16px-to-rem); }
 
@@ -63,7 +54,7 @@ and (min-width: 376px) {
     margin: 10% 0;
   }
 
-  #stay-productive > div > h3, #stay-productive > div > p {
+  #stay-productive > div > h2, #stay-productive > div > p {
     margin-bottom: 3%;
   }
 
@@ -85,14 +76,17 @@ and (max-width: 867px) {
     flex-direction: column;
   }
 
-  h3 {
+  h2 {
     font-size: calc(1rem + 1vw);
-    max-width: border-box;
   }
 
   /* Add in some spacing for items listed in the flex. */
   .features-entry:not(:first-child) {
     margin-top: 20vw;
+  }
+
+  .cta-card p {
+    max-width: 100%;
   }
 
   #stay-productive {
@@ -102,8 +96,11 @@ and (max-width: 867px) {
   #stay-productive > img {
     margin: 10%;
   }
-  #stay-productive > div > h3, #stay-productive > div > p {
+  #stay-productive > div > h2, #stay-productive > div > p {
     margin-bottom: 5%;
+  }
+  #stay-productive > div > h2 {
+    max-width: border-box;
   }
 
   #testimonials {
@@ -116,6 +113,24 @@ and (max-width: 867px) {
     max-width: 100%;
     margin-bottom: 8%;
   }
+
+  .ea-inputs {
+    margin-top: 15%;
+    flex-direction: column;
+  }
+
+  .ea-inputs .cta-button {
+    align-self: center;
+    margin-top: 5%;
+  }
+
+  .ea-inputs input {
+    align-self: stretch;
+  }
+
+  .cta-card {
+    padding: 10% 20%;
+  }
 }
 
 /* Grid in Mobile */
@@ -125,13 +140,12 @@ and (min-width: 867px) {
     margin-bottom: 10vh;
   }
 
-  h3 {
-    max-width: 70%;
-  }
-
   /* Anchors */
   #stay-productive > * {
     max-width: 45%;
+  }
+  #stay-productive > div > h2 {
+    max-width: 70%;
   }
 
   .testimonial-card {
@@ -145,6 +159,18 @@ and (min-width: 867px) {
   #testimonials {
     background: top left / auto url("./assets/bg-quotes.png") no-repeat;
     padding: 35px 1vw 0;
+  }
+
+  .ea-inputs {
+    margin-top: 5%;
+  }
+
+  .cta-card {
+    padding: 2% 10% 5% 10%;
+  }
+
+  .cta-card p {
+    max-width: 70%;
   }
 }
 
@@ -192,8 +218,18 @@ h5 {
   font-size: 1.2rem;
 }
 
+footer {
+  background: hsl(216, 53%, 9%);
+  padding-top: 25vh;
+}
+
+.cta-card p {
+  margin: 0 auto;
+}
+
 #above-fold > p {
-  max-width: 425px;
+  max-width: 500px;
+  margin-bottom: 5%;
 }
 
 /* Helpers */
@@ -240,7 +276,6 @@ button {
   color: white;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  margin-top: 20px;
   max-width: 200px;
   padding: 15px 0;
   width: 100%;
@@ -263,13 +298,19 @@ button {
   padding: 0 10%;
 }
 
-#stay-productive > div > h3 {
+#stay-productive > div > h2 {
   white-space: pre-line;
 }
 
 #testimonials {
   display: flex;
   justify-content: space-between;
+}
+
+#ea-sign-up {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
 }
 
 /* Features Entry */
@@ -296,6 +337,18 @@ button {
 }
 
 /* Testimonials */
+.testimonial-card {
+  background: hsl(219, 30%, 18%);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px hsla(0, 100%, 100%, 0.05);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
 .testimonial-profile {
   display: flex;
   align-items: center;
@@ -310,4 +363,24 @@ button {
   border-radius: 30px;
   width: 40px;
   height: auto;
+}
+
+.cta-card {
+  background: hsl(217, 28%, 15%);
+  border-radius: 15px;
+  max-width: 70%;
+  transform: translateY(15vh);
+}
+
+/* Input */
+.ea-inputs {
+  display: flex;
+}
+.ea-input-email {
+  border: none;
+  border-radius: 50px;
+  flex-grow: 1;
+  height: 50px;
+  padding: 0 5%;
+  margin-right: 3%;
 }
