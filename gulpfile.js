@@ -10,12 +10,17 @@ function assets () {
     .pipe(dest('./dist'))
 }
 
+function lib () {
+  return src('src/*/lib/*')
+    .pipe(dest('./dist'))
+}
+
 function indexHtml () {
   return src('src/*/index.html')
     .pipe(htmlReplace({
       'css': 'style.min.css',
       'js': {
-        'src': 'favicon.png',
+        'src': './assets/favicon.png',
         'tpl': '<link rel="icon" type="image/png" href="%s">'
       }
     }))
@@ -46,4 +51,5 @@ function css () {
 exports.css = css
 exports.indexHtml = indexHtml
 exports.assets = assets
-exports.default = parallel(assets, css, indexHtml)
+exports.lib = lib
+exports.default = parallel(assets, css, indexHtml, lib)
