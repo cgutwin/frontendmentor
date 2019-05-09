@@ -7,23 +7,59 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: "Raleway", sans-serif; }
+
+h1 { line-height: 1.4; }
+
+@media screen and
+  (min-width: 375px) {
+  :root { --bg-curvy-src: url("./assets/bg-curvy-desktop.svg"); }
+}
+
 /* Margins */
 .at-box-end { margin-left: auto; }
+.at-box-center { margin: 0 auto; }
 
 /*
-Page Padding
+Padding
 I did padding this way because of the section separator, so I didn't have to screw with translations and such.
 */
-.pad-default { padding: 5vh 5%; }
+.with-default-padding { padding: 5vh 5%; }
+.with-vertical-section-padding { padding: 10vh 0; }
+
+/* Positioning */
+.is-relative { position: relative; }
 
 /* Text Alignment */
 .has-right-aligned-text { text-align: right; }
+.has-centered-text { text-align: center; }
+
+/* Z-Index */
+.z-index-n1 { z-index: -1; }
+.z-index-1 { z-index: 1; }
+.z-index-2 { z-index: 2; }
+
+/* Font Sizing */
+.is-heading-sized { font-size: calc(1.3rem + 1vw); }
+
+/* Font Weights */
+.weight-400 { font-weight: 400; }
+.weight-700 { font-weight: 700; }
 
 /* Background Colours */
 .bg-blue-216 { background-color: hsl(216, 53%, 9%); } /* footer */
 .bg-blue-217 { background-color: hsl(217, 28%, 15%); } /* above fold and sign up */
 .bg-blue-218 { background-color: hsl(218, 28%, 13%); } /* main */
 .bg-blue-219 { background-color: hsl(219, 30%, 18%); } /* testimonials */
+
+/* Max Widths */
+.has-max-intro-h-width { max-width: calc(500px + 10vw); }
+.has-max-intro-p-width { max-width: calc(350px + 10vw); }
 
 /* List Styles */
 .horizontal-list {
@@ -42,6 +78,7 @@ I did padding this way because of the section separator, so I didn't have to scr
 /* Flex Styles */
 .flex { display: flex; }
 .direction-row { flex-direction: row; }
+.direction-column { flex-direction: column; }
 .with-space-between { justify-content: space-between; }
 .is-vertical-centered { align-items: center; }
 .is-justified-end { justify-content: flex-end; }
@@ -66,11 +103,11 @@ I did padding this way because of the section separator, so I didn't have to scr
   -o-transform: translateY(3px);
 }
 
-/* Above Fold Separator */
-.separator::after {
-  background: url("./assets/bg-curvy-mobile.svg") center / cover no-repeat;
-  content: '';
-  display: block;
-  position: relative;
-  height: auto;
+/* Images */
+.illustration {
+  max-width: 80%;
+  object-fit: scale-down;
 }
+
+/* Headings */
+.main-heading { margin: 4vh 0; }
