@@ -1,0 +1,74 @@
+:root {
+  --bg-curvy-src: url("./assets/bg-curvy-mobile.svg");
+}
+
+html {
+  color: white;
+}
+
+/* Margins */
+.at-box-end { margin-left: auto; }
+
+/*
+Page Padding
+I did padding this way because of the section separator, so I didn't have to screw with translations and such.
+*/
+.pad-default { padding: 5vh 5%; }
+
+/* Text Alignment */
+.has-right-aligned-text { text-align: right; }
+
+/* Background Colours */
+.bg-blue-216 { background-color: hsl(216, 53%, 9%); } /* footer */
+.bg-blue-217 { background-color: hsl(217, 28%, 15%); } /* above fold and sign up */
+.bg-blue-218 { background-color: hsl(218, 28%, 13%); } /* main */
+.bg-blue-219 { background-color: hsl(219, 30%, 18%); } /* testimonials */
+
+/* List Styles */
+.horizontal-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.without-list-style {
+  list-style: none;
+  padding: 0;
+}
+
+/* Flex Styles */
+.flex { display: flex; }
+.direction-row { flex-direction: row; }
+.with-space-between { justify-content: space-between; }
+.is-vertical-centered { align-items: center; }
+.is-justified-end { justify-content: flex-end; }
+
+/* Flex Self */
+.will-grow { flex-grow: 1; }
+.will-flex { flex: 2 1; } /* Will grow and shrink equal amounts */
+.basis-200 { flex-basis: 200px; }
+
+/* Fylo Logos */
+.header-logo {
+  max-height: 40px;
+  max-width: max-content;
+  min-width: 60px;
+  object-fit: scale-down;
+
+  /* The image is optically off vertical center with the nav text */
+  transform: translateY(3px);
+  width: 50%;
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+}
+
+/* Above Fold Separator */
+.separator::after {
+  background: url("./assets/bg-curvy-mobile.svg") center / cover no-repeat;
+  content: '';
+  display: block;
+  position: relative;
+  height: auto;
+}

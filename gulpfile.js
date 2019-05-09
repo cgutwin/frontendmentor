@@ -36,7 +36,7 @@ function indexHtml () {
 }
 
 function css () {
-  return src('src/**/*.css')
+  return src(['src/**/*.css', '!src/**/lib/*.css'])
     .pipe(gulpStylelint({
       reporters: [
         {formatter: 'string', console: true}
