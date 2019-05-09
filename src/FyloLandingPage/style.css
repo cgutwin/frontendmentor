@@ -1,5 +1,6 @@
 :root {
   --bg-curvy-src: url("./assets/bg-curvy-mobile.svg");
+  --blue-gradient: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
 }
 
 html {
@@ -16,6 +17,7 @@ h6 { font-family: "Raleway", sans-serif; }
 
 h1 { line-height: 1.4; }
 
+/* Change the curvy background separator to the desktop one. */
 @media screen and
   (min-width: 375px) {
   :root { --bg-curvy-src: url("./assets/bg-curvy-desktop.svg"); }
@@ -24,13 +26,14 @@ h1 { line-height: 1.4; }
 /* Margins */
 .at-box-end { margin-left: auto; }
 .at-box-center { margin: 0 auto; }
+.with-top-margin { margin-top: 5vh; }
 
 /*
 Padding
 I did padding this way because of the section separator, so I didn't have to screw with translations and such.
 */
 .with-default-padding { padding: 5vh 5%; }
-.with-vertical-section-padding { padding: 10vh 0; }
+.with-vertical-padding { padding: 10vh 0; }
 
 /* Positioning */
 .is-relative { position: relative; }
@@ -43,6 +46,9 @@ I did padding this way because of the section separator, so I didn't have to scr
 .z-index-n1 { z-index: -1; }
 .z-index-1 { z-index: 1; }
 .z-index-2 { z-index: 2; }
+
+/* Font Families */
+.uses-raleway { font-family: "Raleway", sans-serif; }
 
 /* Font Sizing */
 .is-heading-sized { font-size: calc(1.3rem + 1vw); }
@@ -107,6 +113,19 @@ I did padding this way because of the section separator, so I didn't have to scr
 .illustration {
   max-width: 80%;
   object-fit: scale-down;
+}
+
+/* Buttons */
+.cta-button {
+  background: var(--blue-gradient);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 18px 100px;
+}
+
+.is-wider {
+  padding: 18px 125px;
 }
 
 /* Headings */
