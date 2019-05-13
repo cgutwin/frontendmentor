@@ -31,8 +31,10 @@ p { line-height: 1.5; }
 .at-box-end { margin-left: auto; }
 .at-box-center { margin: 0 auto; }
 .with-top-margin { margin-top: 5vh; }
+.with-larger-top-margin { margin-top: 10vh; }
 .with-left-margin { margin-left: 10vw; }
 .paragraph-spaced:not(:first-of-type) { margin-top: calc(5px + 2vh); }
+.no-margins { margin: 0; }
 
 /*
 Padding
@@ -128,6 +130,27 @@ I did padding this way because of the section separator, so I didn't have to scr
 .will-flex { flex: 2 1; } /* Will grow and shrink equal amounts */
 .basis-200 { flex-basis: 200px; }
 
+/* Grid */
+.with-2-cols { grid-template-columns: repeat(2, 1fr); }
+.with-3-cols { grid-template-columns: repeat(3, 1fr); }
+
+/* Grid to Flex */
+@media screen
+  and (min-width: 740px) {
+  .grid-to-flex {
+    display: grid;
+    grid-gap: 100px 25px;
+  }
+}
+
+@media screen
+  and (max-width: 739px) {
+  .grid-to-flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* Fylo Logos */
 .header-logo {
   max-height: 40px;
@@ -155,6 +178,12 @@ I did padding this way because of the section separator, so I didn't have to scr
   width: auto;
 }
 
+.testimonial-profile-image {
+  border-radius: 50px;
+  margin-right: 15px;
+  max-width: 50px;
+}
+
 /* Buttons */
 .cta-button {
   background: var(--blue-gradient);
@@ -180,21 +209,35 @@ everything to.
 @media screen
   and (min-width: 740px) {
   .feature-entry { max-width: 70%; }
-
-  .grid-to-flex {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px 25px;
-  }
 }
 
 @media screen
   and (max-width: 739px) {
   .feature-entry { max-width: 100%; }
   .feature-entry:not(:first-of-type) { margin-top: 50px; }
+}
 
-  .grid-to-flex {
-    display: flex;
-    flex-direction: column;
-  }
+/* Testimonials */
+.testimonial-card {
+  border-radius: 5px;
+  padding: 5% 8% 8%;
+  position: relative;
+  max-width: 350px;
+}
+
+@media screen
+  and (max-width: 739px) {
+  .testimonial-card:not(:first-of-type) { margin-top: 25px; }
+}
+
+.show-quotes::before {
+  background: url("./assets/bg-quotes.png") no-repeat top / contain;
+  content: "";
+  display: block;
+  height: 40px;
+  left: 10px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-33px);
+  width: 40px;
 }
