@@ -15,8 +15,11 @@ h4,
 h5,
 h6 { font-family: "Raleway", sans-serif; }
 
-h1 { line-height: 1.4; }
-h2 { font-size: calc(1.1rem + 0.6vw); }
+h1,
+h3 { line-height: 1.4; }
+
+h3 { font-size: calc(1.1rem + 0.6vw); }
+p { line-height: 1.5; }
 
 /* Change the curvy background separator to the desktop one. 1 above the design's breakpoint */
 @media screen and
@@ -28,6 +31,8 @@ h2 { font-size: calc(1.1rem + 0.6vw); }
 .at-box-end { margin-left: auto; }
 .at-box-center { margin: 0 auto; }
 .with-top-margin { margin-top: 5vh; }
+.with-left-margin { margin-left: 10vw; }
+.paragraph-spaced:not(:first-of-type) { margin-top: calc(5px + 2vh); }
 
 /*
 Padding
@@ -53,6 +58,7 @@ I did padding this way because of the section separator, so I didn't have to scr
 
 /* Font Sizing */
 .is-heading-sized { font-size: calc(1.3rem + 1vw); }
+.h-smaller-on-shrink { font-size: calc(1rem + 1vw); }
 
 /* Font Weights */
 .weight-400 { font-weight: 400; }
@@ -67,6 +73,7 @@ I did padding this way because of the section separator, so I didn't have to scr
 /* Max Widths */
 .has-max-intro-h-width { max-width: calc(500px + 10vw); }
 .has-max-intro-p-width { max-width: calc(350px + 10vw); }
+.has-max-heading-width { max-width: 380px; }
 
 /* List Styles */
 .horizontal-list {
@@ -80,6 +87,22 @@ I did padding this way because of the section separator, so I didn't have to scr
 .without-list-style {
   list-style: none;
   padding: 0;
+}
+
+/* Links */
+.cta-link {
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  color: hsl(176, 68%, 64%);
+  padding-bottom: 5px;
+
+  /* Remove the bottom border to make room for our custom spaced one. */
+  text-decoration: none;
+}
+
+.cta-link::after {
+  /* Right Arrow */
+  content: "\279e";
+  margin-left: 10px;
 }
 
 /* Flex Styles */
@@ -116,6 +139,7 @@ I did padding this way because of the section separator, so I didn't have to scr
 .illustration {
   max-width: 80%;
   object-fit: scale-down;
+  min-width: 250px;
 }
 
 .feature-icon {
@@ -149,7 +173,7 @@ everything to.
   and (min-width: 740px) {
   .feature-entry { max-width: 70%; }
 
-  .features-section {
+  .grid-to-flex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 100px 25px;
@@ -161,7 +185,7 @@ everything to.
   .feature-entry { max-width: 100%; }
   .feature-entry:not(:first-of-type) { margin-top: 50px; }
 
-  .features-section {
+  .grid-to-flex {
     display: flex;
     flex-direction: column;
   }

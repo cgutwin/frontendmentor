@@ -20,7 +20,7 @@ function indexHtml () {
     .pipe(htmlReplace({
       'css': 'style.min.css',
       'js': {
-        'src': './assets/favicon.png',
+        'src': './assets/favicon-32x32.png',
         'tpl': '<link rel="icon" type="image/png" href="%s">'
       }
     }))
