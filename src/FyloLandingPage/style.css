@@ -139,7 +139,7 @@ I did padding this way because of the section separator, so I didn't have to scr
   and (min-width: 740px) {
   .grid-to-flex {
     display: grid;
-    grid-gap: 100px 25px;
+    grid-gap: 75px 20px;
   }
 }
 
@@ -208,7 +208,7 @@ everything to.
 */
 @media screen
   and (min-width: 740px) {
-  .feature-entry { max-width: 70%; }
+  .feature-entry { max-width: 80%; }
 }
 
 @media screen
