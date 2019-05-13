@@ -97,6 +97,14 @@ I did padding this way because of the section separator, so I didn't have to scr
 
   /* Remove the bottom border to make room for our custom spaced one. */
   text-decoration: none;
+  transition: padding-bottom 500ms;
+}
+
+.cta-link:hover { padding-bottom: 8px; }
+
+.cta-link:active {
+  padding-bottom: 4px;
+  transition: padding-bottom 200ms;
 }
 
 .cta-link::after {
