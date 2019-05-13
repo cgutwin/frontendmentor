@@ -16,10 +16,11 @@ h5,
 h6 { font-family: "Raleway", sans-serif; }
 
 h1 { line-height: 1.4; }
+h2 { font-size: calc(1.1rem + 0.6vw); }
 
-/* Change the curvy background separator to the desktop one. */
+/* Change the curvy background separator to the desktop one. 1 above the design's breakpoint */
 @media screen and
-  (min-width: 375px) {
+  (min-width: 376px) {
   :root { --bg-curvy-src: url("./assets/bg-curvy-desktop.svg"); }
 }
 
@@ -86,8 +87,10 @@ I did padding this way because of the section separator, so I didn't have to scr
 .direction-row { flex-direction: row; }
 .direction-column { flex-direction: column; }
 .with-space-between { justify-content: space-between; }
+.with-space-around { justify-content: space-around; }
 .is-vertical-centered { align-items: center; }
 .is-justified-end { justify-content: flex-end; }
+.will-wrap { flex-wrap: wrap; }
 
 /* Flex Self */
 .will-grow { flex-grow: 1; }
@@ -115,13 +118,18 @@ I did padding this way because of the section separator, so I didn't have to scr
   object-fit: scale-down;
 }
 
+.feature-icon {
+  height: 60px;
+  width: auto;
+}
+
 /* Buttons */
 .cta-button {
   background: var(--blue-gradient);
   border: none;
   border-radius: 50px;
   color: white;
-  padding: 18px 100px;
+  padding: 18px 90px;
 }
 
 .is-wider {
@@ -130,3 +138,31 @@ I did padding this way because of the section separator, so I didn't have to scr
 
 /* Headings */
 .main-heading { margin: 4vh 0; }
+
+/*
+Features Section
+
+Will switch from flex on smaller screens to grid on larger ones. Couldn't get flex alone to behave the way I wanted
+everything to.
+*/
+@media screen
+  and (min-width: 740px) {
+  .feature-entry { max-width: 70%; }
+
+  .features-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px 25px;
+  }
+}
+
+@media screen
+  and (max-width: 739px) {
+  .feature-entry { max-width: 100%; }
+  .feature-entry:not(:first-of-type) { margin-top: 50px; }
+
+  .features-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
