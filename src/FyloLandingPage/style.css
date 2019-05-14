@@ -47,6 +47,7 @@ main {
 Padding
 I did padding this way because of the section separator, so I didn't have to screw with translations and such.
 */
+.with-default-horizontal-padding { padding: 0 5%; }
 .with-default-padding { padding: 5vh 5%; }
 .with-vertical-padding { padding: 10vh 0; }
 
@@ -145,6 +146,7 @@ I did padding this way because of the section separator, so I didn't have to scr
 
 /* Grid */
 .with-2-cols { grid-template-columns: repeat(2, 1fr); }
+.with-2-cols-weighted-left { grid-template-columns: 2fr 1fr; }
 .with-3-cols { grid-template-columns: repeat(3, 1fr); }
 
 /* Grid to Flex */
@@ -203,7 +205,10 @@ I did padding this way because of the section separator, so I didn't have to scr
   border: none;
   border-radius: 50px;
   color: white;
-  padding: 18px 90px;
+  padding: 18px 0;
+  max-width: 300px;
+  min-width: 200px;
+  width: 100%;
 }
 
 .is-wider {
@@ -266,4 +271,27 @@ everything to.
   top: -449px;
   width: 100%;
   z-index: -2;
+}
+
+/* Sign Up Box */
+.sign-up-section {
+  border-radius: 5px;
+  max-width: 800px;
+  padding: 2% 5%;
+  transform: translateY(50%);
+}
+
+.sign-up-input {
+  border: none;
+  border-radius: 50px;
+  height: 50px;
+  padding-left: 20px;
+  width: calc(100% - 20px);
+}
+
+@media screen
+  and (max-width: 739px) {
+  .sign-up-input {
+    margin-bottom: 20px;
+  }
 }
