@@ -6,6 +6,7 @@
 html {
   color: white;
   font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 h1,
@@ -20,6 +21,12 @@ h3 { line-height: 1.4; }
 
 h3 { font-size: calc(1.1rem + 0.6vw); }
 p { line-height: 1.5; }
+
+main {
+  position: relative;
+  transform: translateY(-20vh);
+  padding-top: 20vh;
+}
 
 /* Change the curvy background separator to the desktop one. 1 above the design's breakpoint */
 @media screen and
@@ -240,4 +247,17 @@ everything to.
   top: 0;
   transform: translateY(-33px);
   width: 40px;
+}
+
+/* Curvy Divider */
+.divider::before {
+  background: var(--bg-curvy-src) no-repeat bottom left / contain;
+  content: "";
+  height: 100%;
+  max-height: 449px;
+  min-height: 376px;
+  position: absolute;
+  top: -449px;
+  width: 100%;
+  z-index: -1;
 }
