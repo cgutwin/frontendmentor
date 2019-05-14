@@ -259,5 +259,5 @@ everything to.
   position: absolute;
   top: -449px;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
 }
