@@ -99,6 +99,12 @@ I did padding this way because of the section separator, so I didn't have to scr
 }
 
 /* Links */
+.is-header-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .cta-link {
   border-bottom: 1px solid hsl(176, 68%, 64%);
   color: hsl(176, 68%, 64%);
