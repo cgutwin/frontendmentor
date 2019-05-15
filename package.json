@@ -1,6 +1,9 @@
 {
   "browserslist": [
-    "defaults"
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
   ],
   "devDependencies": {
     "autoprefixer": "^9.5.1",

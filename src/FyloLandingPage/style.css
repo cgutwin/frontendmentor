@@ -114,9 +114,16 @@ I did padding this way because of the section separator, so I didn't have to scr
 
 /* Links */
 .is-header-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
   color: white;
   cursor: pointer;
   text-decoration: none;
+  transition: padding-bottom 250ms, border-bottom 250ms;
+}
+
+.is-header-link:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  padding-bottom: 5px;
 }
 
 .cta-link {
@@ -126,7 +133,7 @@ I did padding this way because of the section separator, so I didn't have to scr
 
   /* Remove the bottom border to make room for our custom spaced one. */
   text-decoration: none;
-  transition: padding-bottom 500ms;
+  transition: padding-bottom 250ms;
 }
 
 .cta-link:hover { padding-bottom: 8px; }
@@ -218,6 +225,13 @@ I did padding this way because of the section separator, so I didn't have to scr
   width: 32px;
   height: auto;
   margin: 20px;
+  transition: fill 250ms, transform 250ms;
+  fill: #fff;
+}
+
+.social-icon:hover {
+  fill: #65e2d9;
+  transform: scale(1.05);
 }
 
 /* Buttons */
@@ -230,7 +244,15 @@ I did padding this way because of the section separator, so I didn't have to scr
   padding: 18px 0;
   max-width: 300px;
   min-width: 200px;
+  transition: transform 500ms;
   width: 100%;
+}
+
+.cta-button:hover { transform: scale(1.05); }
+
+.cta-button:active {
+  transform: scale(0.95);
+  transition: transform 200ms;
 }
 
 .is-wider {
