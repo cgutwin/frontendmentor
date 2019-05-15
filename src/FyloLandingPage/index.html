@@ -195,7 +195,11 @@
           </div>
           <form class="grid-to-flex with-2-cols-weighted-left with-top-margin">
             <label>
-              <input class="sign-up-input" type="email" placeholder="email@example.com"/>
+              <input class="sign-up-input"
+                     required
+                     placeholder="email@example.com"
+                     type="email"
+              />
             </label>
             <button class="cta-button uses-raleway weight-700 at-box-center" type="submit">
               Get Started for Free
@@ -204,11 +208,83 @@
         </div>
       </section>
     </main>
+    <!-- Padding in here because in the element selector, it doesn't apply. -->
     <footer style="padding-top: 250px;" class="bg-blue-216 with-default-horizontal-padding">
-      <img alt="logo-footer" src="./assets/logo.svg"/>
-      <div class="grid-to-flex with-3-cols-weighted-left">
-        <div></div>
-        <nav class="flex direction-row">
+      <img alt="logo-footer"
+           style="margin-bottom: 5%;"
+           src="./assets/logo.svg"/>
+      <div class="grid-to-flex with-5-cols-for-footer">
+        <ul>
+          <li class="is-address">
+            8888 8th Ave. East<br/>
+            8th Floor, Unit 8<br/>
+            Vancouver, BC, Canada<br/>
+            V8A 8E8
+          </li>
+        </ul>
+        <ul>
+          <li class="is-phone">
+            <a class="is-header-link"
+               href="tel:+16048888888">
+              +1 (604) 888-8888
+            </a>
+          </li>
+          <li class="footer-list is-email">
+            <a class="is-header-link"
+               href="mailto:hello@fylo.com">
+              hello@fylo.com
+            </a>
+          </li>
+        </ul>
+        <nav>
+          <ul class="without-list-style">
+            <li>
+              <a class="is-header-link"
+                 href="#about-us">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a class="is-header-link"
+                 href="#jobs">
+                Jobs
+              </a>
+            </li>
+            <li>
+              <a class="is-header-link"
+                 href="#press">
+                Press
+              </a>
+            </li>
+            <li>
+              <a class="is-header-link"
+                 href="#blog">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul class="without-list-style">
+            <li>
+              <a class="is-header-link"
+                 href="#contact-us">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a class="is-header-link"
+                 href="#terms">
+                Terms
+              </a>
+            </li>
+            <li>
+              <a class="is-header-link"
+                 href="#privacy">
+                Privacy
+              </a>
+            </li>
+          </ul>
         </nav>
         <div>
           <ul class="horizontal-list without-list-style at-box-center">
