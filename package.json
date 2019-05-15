@@ -1,18 +1,25 @@
 {
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
   "devDependencies": {
-    "autoprefixer": "^9.5.0",
+    "autoprefixer": "^9.5.1",
     "cssnano": "^4.1.10",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-html-replace": "^1.6.2",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-stylelint": "^8.0.0",
-    "postcss": "^7.0.14",
+    "gulp-stylelint": "^9.0.0",
+    "postcss": "^7.0.16",
     "postcss-preset-env": "^6.6.0",
-    "postcss-sorting": "^4.1.0",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0"
+    "postcss-sorting": "^5.0.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
   },
   "scripts": {
     "gulp": "gulp"

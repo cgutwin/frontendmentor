@@ -1,322 +1,213 @@
 :root {
   --bg-curvy-src: url("./assets/bg-curvy-mobile.svg");
-  --cta-gradient: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
-  --16px-to-rem: 1.143rem;
+  --blue-gradient: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
 }
 
-/* Larger than Mobile*/
-@media only screen
-and (min-width: 376px) {
-  :root {
-    --bg-curvy-src: url("./assets/bg-curvy-desktop.svg");
-  }
-
-  h2 {
-    font-size: calc(1.4rem + 1vw);
-    line-height: 1.3;
-  }
-
-  /* Header Media */
-  header ul {
-    margin-left: auto;
-    max-width: 300px;
-  }
-
-  .testimonial-card > p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-
-  /* Font Sizing */
-  #above-fold > p {
-    font-size: var(--16px-to-rem);
-    margin-bottom: 10%;
-  }
-
-  .cta-button { font-size: var(--16px-to-rem); }
-
-  /* Grid */
-  #features {
-    align-items: flex-start;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-gap: 50px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Anchors */
-  #stay-productive {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10% 0;
-  }
-
-  #stay-productive > div > h2, #stay-productive > div > p {
-    margin-bottom: 3%;
-  }
-
-  #stay-productive > img {
-    margin: 5%;
-  }
-
-  #testimonials {
-    flex-direction: row;
-  }
-}
-
-/* Grid in Mobile */
-@media only screen
-and (max-width: 867px) {
-  #features {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  h2 {
-    font-size: calc(1rem + 1vw);
-  }
-
-  /* Add in some spacing for items listed in the flex. */
-  .features-entry:not(:first-child) {
-    margin-top: 20vw;
-  }
-
-  .cta-card p {
-    max-width: 100%;
-  }
-
-  #stay-productive {
-    margin: 20vw 0;
-  }
-
-  #stay-productive > img {
-    margin: 10%;
-  }
-  #stay-productive > div > h2, #stay-productive > div > p {
-    margin-bottom: 5%;
-  }
-  #stay-productive > div > h2 {
-    max-width: border-box;
-  }
-
-  #testimonials {
-    background: top 25px left 20px / 30px url("./assets/bg-quotes.png") no-repeat;
-    flex-direction: column;
-    padding: 50px 1vw 0;
-  }
-
-  .testimonial-card {
-    max-width: 100%;
-    margin-bottom: 8%;
-  }
-
-  .ea-inputs {
-    margin-top: 15%;
-    flex-direction: column;
-  }
-
-  .ea-inputs .cta-button {
-    align-self: center;
-    margin-top: 5%;
-  }
-
-  .ea-inputs input {
-    align-self: stretch;
-  }
-
-  .cta-card {
-    padding: 10% 20%;
-  }
-}
-
-/* Grid in Mobile */
-@media only screen
-and (min-width: 867px) {
-  .features-entry:nth-child(4n + 1), .features-entry:nth-child(4n + 2) {
-    margin-bottom: 10vh;
-  }
-
-  /* Anchors */
-  #stay-productive > * {
-    max-width: 45%;
-  }
-  #stay-productive > div > h2 {
-    max-width: 70%;
-  }
-
-  .testimonial-card {
-    max-width: 25%;
-  }
-
-  .testimonial-card:not(:first-of-type) {
-    margin-left: 2%;
-  }
-
-  #testimonials {
-    background: top left / auto url("./assets/bg-quotes.png") no-repeat;
-    padding: 35px 1vw 0;
-  }
-
-  .ea-inputs {
-    margin-top: 5%;
-  }
-
-  .cta-card {
-    padding: 2% 10% 5% 10%;
-  }
-
-  .cta-card p {
-    max-width: 70%;
-  }
-}
-
-/* Global */
 html {
-  background: linear-gradient(to bottom, hsl(217, 28%, 15%), hsl(217, 28%, 15%) 100vh, hsl(218, 28%, 13%) 100vh, hsl(218, 28%, 13%));
-  color: hsl(0, 0%, 100%);
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  color: white;
+  font-family: "Open Sans", -apple-system, sans-serif;
+  font-size: 16px;
 }
-
-body {
-  margin: 0 auto;
-  max-width: 1440px;
-  width: 100%;
-}
-
-li { list-style: none; }
-
-main {
-  background: hsl(218, 28%, 13%);
-  padding: 25vh 10% 0;
-}
-
-/* Font Sizing */
-
-p { margin-top: 0; }
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Raleway", sans-serif;
-  line-height: 1.6;
-}
+h6 { font-family: "Raleway", -apple-system, sans-serif; }
 
-h1 {
-  font-size: calc(1.4rem + 1vw);
-  max-width: 600px;
-}
+h1,
+h3 { line-height: 1.4; }
 
-h5 {
-  font-size: 1.2rem;
+h3 { font-size: calc(1.1rem + 0.6vw); }
+p { line-height: 1.5; }
+
+main {
+  position: relative;
+  transform: translateY(-20vh);
+  padding-top: 20vh;
+  margin-bottom: -20vh;
 }
 
 footer {
-  background: hsl(216, 53%, 9%);
-  padding-top: 25vh;
+  font-size: calc(1rem + 0.2vw);
 }
 
-.cta-card p {
-  margin: 0 auto;
+footer ul > li {
+  list-style-position: outside;
+  margin-bottom: 10%;
 }
 
-#above-fold > p {
-  max-width: 500px;
-  margin-bottom: 5%;
+footer nav ul > li { margin-bottom: 5%; }
+footer ul { padding-left: 10%; }
+
+/* Change the curvy background separator to the desktop one. 1 above the design's breakpoint */
+@media screen and
+  (min-width: 376px) {
+  :root { --bg-curvy-src: url("./assets/bg-curvy-desktop.svg"); }
 }
 
-/* Helpers */
-.text-center { text-align: center; }
+/* Margins */
+.at-box-end { margin-left: auto; }
+.at-box-center { margin: 0 auto; }
+.with-top-margin { margin-top: 5vh; }
+.with-larger-top-margin { margin-top: 10vh; }
+.with-left-margin { margin-left: 10vw; }
+.paragraph-spaced:not(:first-of-type) { margin-top: calc(5px + 2vh); }
+.no-margins { margin: 0; }
 
-.flex { display: flex; }
+/*
+Padding
+I did padding this way because of the section separator, so I didn't have to screw with translations and such.
+*/
+.with-default-horizontal-padding { padding: 0 5%; }
+.with-default-padding { padding: 5vh 5%; }
+.with-vertical-padding { padding: 10vh 0; }
 
-.flex-dir-col { flex-direction: column; }
+/* Positioning */
+.is-relative { position: relative; }
 
-.flex-align-cen { align-items: center; }
+/* Text Alignment */
+.has-right-aligned-text { text-align: right; }
+.has-centered-text { text-align: center; }
 
-/* Header */
-header {
-  align-items: center;
-  display: grid;
-  grid: 1fr / 22vw 1fr;
-  padding: 5%;
-}
+/* Z-Index */
+.z-index-n1 { z-index: -1; }
+.z-index-1 { z-index: 1; }
+.z-index-2 { z-index: 2; }
 
-header ul {
+/* Font Families */
+.uses-raleway { font-family: "Raleway", sans-serif; }
+
+/* Font Sizing */
+.is-heading-sized { font-size: calc(1.3rem + 1vw); }
+.h-smaller-on-shrink { font-size: calc(1rem + 1vw); }
+
+/* Font Weights */
+.weight-400 { font-weight: 400; }
+.weight-700 { font-weight: 700; }
+
+/* Background Colours */
+.bg-blue-216 { background-color: hsl(216, 53%, 9%); } /* footer */
+.bg-blue-217 { background-color: hsl(217, 28%, 15%); } /* above fold and sign up */
+.bg-blue-218 { background-color: hsl(218, 28%, 13%); } /* main */
+.bg-blue-219 { background-color: hsl(219, 30%, 18%); } /* testimonials */
+
+/* Max Widths */
+.has-max-intro-h-width { max-width: calc(500px + 10vw); }
+.has-max-intro-p-width { max-width: calc(350px + 10vw); }
+.has-max-heading-width { max-width: 380px; }
+
+/* List Styles */
+.horizontal-list {
   display: flex;
   flex-direction: row;
-  /*font-size: 1rem;*/
-  justify-content: space-between;
+  justify-content: space-around;
+  max-width: 20rem;
+  margin-left: auto;
 }
 
-.fylo-logo {
-  max-height: 52px;
-  max-width: 176px;
-  width: 100%;
+.without-list-style {
+  list-style: none;
+  padding: 0;
 }
 
-/* FIXME: Chrome renders too much space around above-fold image. */
-
-/* Buttons */
-button {
-  cursor: pointer;
-}
-
-.cta-button {
-  background: var(--cta-gradient);
-  border: none;
-  border-radius: 50px;
+/* Links */
+.is-header-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
   color: white;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  max-width: 200px;
-  padding: 15px 0;
-  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  transition: padding-bottom 250ms, border-bottom 250ms;
+}
+
+.is-header-link:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  padding-bottom: 5px;
+}
+
+.cta-link {
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  color: hsl(176, 68%, 64%);
+  padding-bottom: 5px;
+
+  /* Remove the bottom border to make room for our custom spaced one. */
+  text-decoration: none;
+  transition: padding-bottom 250ms;
+}
+
+.cta-link:hover { padding-bottom: 8px; }
+
+.cta-link:active {
+  padding-bottom: 4px;
+  transition: padding-bottom 200ms;
+}
+
+.cta-link::after {
+  /* Right Arrow */
+  content: "\279e";
+  margin-left: 10px;
+}
+
+/* Flex Styles */
+.flex { display: flex; }
+.direction-row { flex-direction: row; }
+.direction-column { flex-direction: column; }
+.with-space-between { justify-content: space-between; }
+.with-space-around { justify-content: space-around; }
+.is-vertical-centered { align-items: center; }
+.is-justified-end { justify-content: flex-end; }
+.will-wrap { flex-wrap: wrap; }
+
+/* Flex Self */
+.will-grow { flex-grow: 1; }
+.will-flex { flex: 2 1; } /* Will grow and shrink equal amounts */
+.basis-200 { flex-basis: 200px; }
+
+/* Grid */
+.with-2-cols { grid-template-columns: repeat(2, 1fr); }
+.with-2-cols-weighted-left { grid-template-columns: 2fr 1fr; }
+.with-3-cols { grid-template-columns: repeat(3, 1fr); }
+.with-3-cols-weighted-left { grid-template-columns: 2fr 1fr 1fr; }
+.with-5-cols-for-footer { grid-template-columns: 2fr 2fr 1fr 1fr 1fr; }
+
+/* Grid to Flex */
+@media screen
+  and (min-width: 740px) {
+  .grid-to-flex {
+    display: grid;
+    grid-gap: 75px 20px;
+  }
+}
+
+@media screen
+  and (max-width: 739px) {
+  .grid-to-flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Fylo Logos */
+.header-logo {
+  max-height: 40px;
+  max-width: 80%;
+  min-width: 60px;
+  object-fit: scale-down;
+
+  /* The image is optically off vertical center with the nav text */
+  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
 }
 
 /* Images */
-.half-width-img {
-  height: 50%;
-  max-width: 675px;
-  min-width: 250px;
+.illustration {
+  max-width: 80%;
   object-fit: scale-down;
-  /* Chrome messes with the aspect ratio without this line. */
-  width: 50%;
-}
-
-/* Anchors */
-#above-fold {
-  background-size: contain;
-  margin-top: 20px;
-  padding: 0 10%;
-}
-
-#stay-productive > div > h2 {
-  white-space: pre-line;
-}
-
-#testimonials {
-  display: flex;
-  justify-content: space-between;
-}
-
-#ea-sign-up {
-  display: flex;
-  justify-content: center;
-  margin-top: 5vh;
-}
-
-/* Features Entry */
-.features-entry {
-  justify-self: center;
-  max-width: 380px;
+  min-width: 250px;
 }
 
 .feature-icon {
@@ -324,63 +215,132 @@ button {
   width: auto;
 }
 
-/* Links */
-.cta-link {
-  color: hsl(176, 68%, 64%);
-  text-decoration: none;
-  border-bottom: 1px solid hsl(176, 68%, 64%);
-  padding-bottom: 3px;
+.testimonial-profile-image {
+  border-radius: 50px;
+  margin-right: 15px;
+  max-width: 50px;
 }
-.cta-link::after {
-  display: inline-block;
-  content: "\279e";
+
+.social-icon {
+  width: 32px;
+  height: auto;
+  margin: 20px;
+  transition: fill 250ms, transform 250ms;
+  fill: #fff;
+}
+
+.social-icon:hover {
+  fill: #65e2d9;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.cta-button {
+  background: var(--blue-gradient);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  padding: 18px 0;
+  max-width: 300px;
+  min-width: 200px;
+  transition: transform 500ms;
+  width: 100%;
+}
+
+.cta-button:hover { transform: scale(1.05); }
+
+.cta-button:active {
+  transform: scale(0.95);
+  transition: transform 200ms;
+}
+
+.is-wider {
+  padding: 18px 125px;
+}
+
+/* Headings */
+.main-heading { margin: 4vh 0; }
+
+/*
+Features Section
+
+Will switch from flex on smaller screens to grid on larger ones. Couldn't get flex alone to behave the way I wanted
+everything to.
+*/
+@media screen
+  and (min-width: 740px) {
+  .feature-entry { max-width: 80%; }
+}
+
+@media screen
+  and (max-width: 739px) {
+  .feature-entry { max-width: 100%; }
+  .feature-entry:not(:first-of-type) { margin-top: 50px; }
 }
 
 /* Testimonials */
 .testimonial-card {
-  background: hsl(219, 30%, 18%);
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px hsla(0, 100%, 100%, 0.05);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 5% 8% 8%;
   position: relative;
-  z-index: 2;
+  max-width: 350px;
 }
 
-.testimonial-profile {
-  display: flex;
-  align-items: center;
-  justify-self: flex-end;
+@media screen
+  and (max-width: 739px) {
+  .testimonial-card:not(:first-of-type) { margin-top: 25px; }
 }
 
-.testimonial-profile > div > * {
-  margin: 0 10px;
-}
-
-.profile-icon {
-  border-radius: 30px;
+.show-quotes::before {
+  background: url("./assets/bg-quotes.png") no-repeat top / contain;
+  content: "";
+  display: block;
+  height: 40px;
+  left: 10px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-33px);
   width: 40px;
-  height: auto;
 }
 
-.cta-card {
-  background: hsl(217, 28%, 15%);
-  border-radius: 15px;
-  max-width: 70%;
-  transform: translateY(15vh);
+/* Curvy Divider */
+.divider::before {
+  background: var(--bg-curvy-src) no-repeat bottom left / contain;
+  content: "";
+  height: 100%;
+  max-height: 449px;
+  min-height: 376px;
+  position: absolute;
+  top: -449px;
+  width: 100%;
+  z-index: -2;
 }
 
-/* Input */
-.ea-inputs {
-  display: flex;
+/* Sign Up Box */
+.sign-up-section {
+  border-radius: 5px;
+  max-width: 800px;
+  padding: 4% 5%;
+  transform: translateY(50%);
 }
-.ea-input-email {
+
+.sign-up-input {
   border: none;
   border-radius: 50px;
-  flex-grow: 1;
   height: 50px;
-  padding: 0 5%;
-  margin-right: 3%;
+  padding-left: 20px;
+  width: calc(100% - 20px);
 }
+
+@media screen
+  and (max-width: 739px) {
+  .sign-up-input {
+    margin-bottom: 20px;
+  }
+}
+
+/* Footer */
+.is-address { list-style-image: url("./assets/icon-location.svg"); }
+.is-phone { list-style-image: url("./assets/icon-phone.svg"); }
+.is-email { list-style-image: url("./assets/icon-email.svg"); }
