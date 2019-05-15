@@ -4,6 +4,7 @@ const gulpStylelint = require('gulp-stylelint')
 const rename = require('gulp-rename')
 const htmlReplace = require('gulp-html-replace')
 const htmlmin = require('gulp-htmlmin')
+const imagemin = require('gulp-imagemin')
 
 function assets () {
   return src('src/*/assets/*')
@@ -12,6 +13,12 @@ function assets () {
 
 function lib () {
   return src('src/*/lib/*')
+    .pipe(dest('./dist'))
+}
+
+function images () {
+  return src(['src/*/assets/*.jpg', 'src/*/assets/*.png', 'src/*/assets/*.svg'])
+    .pipe(imagemin())
     .pipe(dest('./dist'))
 }
 
@@ -52,4 +59,4 @@ exports.css = css
 exports.indexHtml = indexHtml
 exports.assets = assets
 exports.lib = lib
-exports.default = parallel(assets, css, indexHtml, lib)
+exports.default = parallel(assets, css, images, indexHtml, lib)
