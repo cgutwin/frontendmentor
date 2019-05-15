@@ -26,6 +26,7 @@ main {
   position: relative;
   transform: translateY(-20vh);
   padding-top: 20vh;
+  margin-bottom: -20vh;
 }
 
 /* Change the curvy background separator to the desktop one. 1 above the design's breakpoint */
@@ -148,6 +149,7 @@ I did padding this way because of the section separator, so I didn't have to scr
 .with-2-cols { grid-template-columns: repeat(2, 1fr); }
 .with-2-cols-weighted-left { grid-template-columns: 2fr 1fr; }
 .with-3-cols { grid-template-columns: repeat(3, 1fr); }
+.with-3-cols-weighted-left { grid-template-columns: 2fr 1fr 1fr; }
 
 /* Grid to Flex */
 @media screen
@@ -197,6 +199,12 @@ I did padding this way because of the section separator, so I didn't have to scr
   border-radius: 50px;
   margin-right: 15px;
   max-width: 50px;
+}
+
+.social-icon {
+  width: 32px;
+  height: auto;
+  margin: 20px;
 }
 
 /* Buttons */
@@ -277,7 +285,7 @@ everything to.
 .sign-up-section {
   border-radius: 5px;
   max-width: 800px;
-  padding: 2% 5%;
+  padding: 4% 5%;
   transform: translateY(50%);
 }
 
@@ -294,4 +302,13 @@ everything to.
   .sign-up-input {
     margin-bottom: 20px;
   }
+}
+
+/* Footer */
+.address {
+  text-indent: 5em each-line;
+}
+
+.address::before {
+  content: url("./assets/icon-location.svg");
 }
